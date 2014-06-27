@@ -1,7 +1,7 @@
 class CreateEspecimen < ActiveRecord::Migration
   def change
     create_table :especimen do |t|
-      t.string :extension,       
+      t.string :extension     
       t.string :dominio,        :null => false
       t.string :filo,           :null => false
       t.string :clase,          :null => false
