@@ -11,43 +11,68 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :photo %><br>
-    <%= f.file_field :photo %>
-  </div>
-  <div class="field">
-    <%= f.label :dominio %><br>
-    <%= f.text_field :dominio %>
-  </div>
-  <div class="field">
-    <%= f.label :filo %><br>
-    <%= f.text_field :filo %>
-  </div>
-  <div class="field">
-    <%= f.label :clase %><br>
-    <%= f.text_field :clase %>
-  </div>
-  <div class="field">
-    <%= f.label :orden %><br>
-    <%= f.text_field :orden %>
-  </div>
-  <div class="field">
-    <%= f.label :familia %><br>
-    <%= f.text_field :familia %>
-  </div>
-  <div class="field">
-    <%= f.label :genero %><br>
-    <%= f.text_field :genero %>
-  </div>
-  <div class="field">
-    <%= f.label :especie %><br>
-    <%= f.text_field :especie %>
-  </div>
-  <div class="field">
-    <%= f.label :observaciones %><br>
-    <%= f.text_area :observaciones %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <div class="container-fluid">
+      <div class="page-header">
+        <h1>InsecTem<small> Tus Imágenes!</small></h1>
+      </div>
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      
+
+      <!-- inicio fila 1 -->
+      <div class="row">
+        <div class="span11">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          
+
+          <img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xfp1/t1.0-9/10477073_10203546679220025_797868925739391438_n.jpg" />
+         <!--<img src="http://placehold.it/1200x400" />-->  
+         <br>
+         <br>
+          <p>Ingresa los datos del artrópodo que encontraste juntos haremos que InsecTem sea cada día mas grande.
+              Recuerda subir la información de forma correcta. ¡Muchas Gracias!</p>
+          <br>
+            <div class="actions">
+            <button class="btn btn-inverse">Aceptar</button> <% f.submit %> 
+          </div>
+          </p> 
+        </div>
+        <div class="span3">
+          <h2>Subir Imagen</h2>
+          <div class="field">
+            <%= f.file_field :photo %>
+          </div>
+          <div class="field">
+            <%= f.text_field :dominio, :value => "Animal"  %>
+          </div>
+          <div class="field">
+            <%= f.text_field :filo, :value => "Arthropoda" %>
+          </div>
+          <div class="field">
+            <%= f.text_field :clase, :placeholder => 'Clase' %>
+          </div>
+          <div class="field">
+            <%= f.text_field :orden, :placeholder => 'Orden' %>
+          </div>
+          <div class="field">
+            <%= f.text_field :familia, :placeholder => 'Familia' %>
+          </div>
+          <div class="field">
+            <%= f.text_field :genero, :placeholder => 'Genero' %>
+          </div>
+          <div class="field">
+            <%= f.text_field :especie, :placeholder => 'Especie' %>
+          </div>
+          <div class="field">
+            <%= f.text_area :observaciones, :placeholder => 'Observaciones' %>
+          </div>
+          
+               
+
+            </form>
+        </div>
 <% end %>

@@ -4,15 +4,15 @@
     <div class="hero-unit">
 	  	<p class="text-center"><h1><big>Bienvenido!</big></h1><p>
         <h4>Ahora haces parte de los usuarios de InsecTem, puedes iniciar tu historial en este sitio subiendo todas las fotos de insectos que desees con la informacion correspondiente y ampliar tus conocimientos sobre la gran diversidad de insectos que habitan en nuestro planeta! Además puedes consultar, modificar y denunciar la información suministrada por otros usuarios</p>
-        <p><a href="#" class="btn btn-inverse btn-large">Iniciar InsecTem</a></h4>
+        
     	<div class="container">
     	<div class = "field">
       		<%= label_tag :email %>  		<%= text_field_tag :email %>
       		<%= label_tag :password %>
-      		<%= text_field_tag :password %>
+      		<%= password_field_tag :password %>
       		</div>
       	<div class = "actions">
-      		<%= submit_tag "login" %>
+      		<button class="btn btn-inverse">Iniciar Insectem</button> <% submit_tag %>
       	</div>
       </div>
 

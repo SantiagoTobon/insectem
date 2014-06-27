@@ -1,5 +1,5 @@
 class Especiman < ActiveRecord::Base
-	
+	validates_presence_of :extension, :dominio, :filo, :clase, :orden, :familia, :genero, :especie
 	FOTOS = File.join Rails.root, 'public', 'photo_store'
 	after_save :guardar_foto
 

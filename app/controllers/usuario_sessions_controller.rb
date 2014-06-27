@@ -4,7 +4,7 @@ class UsuarioSessionsController < ApplicationController
 	end
 	def create
 		if @usuario= login(params[:email],params[:password])
-			redirect_back_or_to(especimen_path, message: "Bienvenido")
+			redirect_back_or_to(new_especiman_path, message: "Bienvenido")
 		else
 		flash.now[:alert] = "Especimen no encontrado"
 		render action: 'new'
@@ -12,7 +12,7 @@ class UsuarioSessionsController < ApplicationController
 	end
 	def destroy
 		logout
-		redirect_to(:usuarios, message: "Adios")
+		redirect_to(new_usuario_path, message: "Adios")
 		
 	end
 end
