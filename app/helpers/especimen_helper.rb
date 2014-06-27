@@ -1,0 +1,2 @@
+module EspecimenHelper
+end

@@ -1,0 +1,53 @@
+<%= form_for(@especiman, html: {multipart: true}) do |f| %>
+  <% if @especiman.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@especiman.errors.count, "error") %> prohibited this especiman from being saved:</h2>
+
+      <ul>
+      <% @especiman.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :photo %><br>
+    <%= f.file_field :photo %>
+  </div>
+  <div class="field">
+    <%= f.label :dominio %><br>
+    <%= f.text_field :dominio %>
+  </div>
+  <div class="field">
+    <%= f.label :filo %><br>
+    <%= f.text_field :filo %>
+  </div>
+  <div class="field">
+    <%= f.label :clase %><br>
+    <%= f.text_field :clase %>
+  </div>
+  <div class="field">
+    <%= f.label :orden %><br>
+    <%= f.text_field :orden %>
+  </div>
+  <div class="field">
+    <%= f.label :familia %><br>
+    <%= f.text_field :familia %>
+  </div>
+  <div class="field">
+    <%= f.label :genero %><br>
+    <%= f.text_field :genero %>
+  </div>
+  <div class="field">
+    <%= f.label :especie %><br>
+    <%= f.text_field :especie %>
+  </div>
+  <div class="field">
+    <%= f.label :observaciones %><br>
+    <%= f.text_area :observaciones %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

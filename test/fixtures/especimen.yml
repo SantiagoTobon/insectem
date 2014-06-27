@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  extension: MyString
+  dominio: MyString
+  filo: MyString
+  clase: MyString
+  orden: MyString
+  familia: MyString
+  genero: MyString
+  especie: MyString
+  observaciones: MyText
+
+two:
+  extension: MyString
+  dominio: MyString
+  filo: MyString
+  clase: MyString
+  orden: MyString
+  familia: MyString
+  genero: MyString
+  especie: MyString
+  observaciones: MyText

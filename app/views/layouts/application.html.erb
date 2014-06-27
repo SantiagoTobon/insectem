@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Insectem</title>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
+   
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link href="bootstrap.css" rel="stylesheet">
+      <style type="text/css">
+         body {
+           padding-top: 50px;
+           padding-bottom: 40px;
+         }
+      </style>
+      <link href="bootstrap-responsive.css" rel="stylesheet">
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                      <link rel="shortcut icon" href="../assets/ico/favicon.png">
+   
+   </head>
+   <body>
+      <div class="navbar navbar-inverse navbar-fixed-top">
+         <div class="navbar-inner">
+               <div class="container">
+                  
+                  
+               
+               <div class="nav-collapse collapse">
+                  <ul class="nav">
+                     <li><p class="navbar-text navbar-left">InsecTem</p></li>
+                     <li><%= link_to 'Inicio', new_usuario_path %></a></li>
+                     <li><a href="#contact">Contactenos</a></li>
+                     <% if current_user  %>
+                           <li ><%= link_to 'Nuevos Especimenes', new_especiman_path %></li>
+                     <% end %>
+                  </ul>
+                  <form class="navbar-form pull-right">
+                     <% if current_user  %>
+                          <button type="submit" class="btn"><%= link_to 'logou', logout_path %></button>
+                     <% else %>
+
+                        <button type="submit" class="btn"><%= link_to 'log in', login_path %></button>
+                     <% end %>
+                  </form>
+
+               </div>
+                    </form>
+               </div><!--/.nav-collapse -->
+         </div>
+      </div>
+        <%= yield %>
+   </body>
+</html>

@@ -1,0 +1,41 @@
+<h1>Listing especimen</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Extension</th>
+      <th>Dominio</th>
+      <th>Filo</th>
+      <th>Clase</th>
+      <th>Orden</th>
+      <th>Familia</th>
+      <th>Genero</th>
+      <th>Especie</th>
+      <th>Observaciones</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @especimen.each do |especiman| %>
+      <tr>
+        <td><%= especiman.extension %></td>
+        <td><%= especiman.dominio %></td>
+        <td><%= especiman.filo %></td>
+        <td><%= especiman.clase %></td>
+        <td><%= especiman.orden %></td>
+        <td><%= especiman.familia %></td>
+        <td><%= especiman.genero %></td>
+        <td><%= especiman.especie %></td>
+        <td><%= especiman.observaciones %></td>
+        <td><%= link_to 'Show', especiman %></td>
+        <td><%= link_to 'Edit', edit_especiman_path(especiman) %></td>
+        <td><%= link_to 'Destroy', especiman, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Especiman', new_especiman_path %>

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Extension:</strong>
+  <%= image_tag @especiman.photo_path %> 
+</p>
+
+<p>
+  <strong>Dominio:</strong>
+  <%= @especiman.dominio %>
+</p>
+
+<p>
+  <strong>Filo:</strong>
+  <%= @especiman.filo %>
+</p>
+
+<p>
+  <strong>Clase:</strong>
+  <%= @especiman.clase %>
+</p>
+
+<p>
+  <strong>Orden:</strong>
+  <%= @especiman.orden %>
+</p>
+
+<p>
+  <strong>Familia:</strong>
+  <%= @especiman.familia %>
+</p>
+
+<p>
+  <strong>Genero:</strong>
+  <%= @especiman.genero %>
+</p>
+
+<p>
+  <strong>Especie:</strong>
+  <%= @especiman.especie %>
+</p>
+
+<p>
+  <strong>Observaciones:</strong>
+  <%= @especiman.observaciones %>
+</p>
+
+<%= link_to 'Edit', edit_especiman_path(@especiman) %> |
+<%= link_to 'Back', especimen_path %>

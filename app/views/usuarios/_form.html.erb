@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<%= form_for(@usuario) do |f| %>
+  <% if @usuario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+
+      <ul>
+      <% @usuario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+      <div class="page-header">
+        <h1>InsecTem <small> Bienvenido!</small></h1>
+      </div>
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      
+
+      <!-- inicio fila 1 -->
+      <div class="row">
+        <div class="span8">
+         <img src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpf1/t1.0-9/10482856_10203531409718297_1700772593121760516_n.jpg" />
+         <!--<img src="http://placehold.it/600x300" /> -->
+          <h3>Información</h3>
+          En este sitio, puedes indagar y solucionar todas tus dudas sobre los datos relacionados con los insectos que habitan en Colombia y el mundo.
+            Todo esto lo puedes realizar desde cualquier lugar, prueba nuestra aplicación movil de Insectem</p>
+          <a class="btn btn-inverse" href="#">Descargar aplicacion Movil</a></p>
+        </div>
+        <div class="span4">
+          <!--<img src="http://placehold.it/300x150" />-->
+          <h2>Registro</h2>
+          <form>
+            <legend>Ingresa tus datos</legend>
+            <!--<label>Nombre</label>-->
+            <div class="field">
+              <%= f.text_field  :nameuser, :placeholder => 'Nombre de usuario'  %>
+            </div>
+            <div class="field">
+              <%= f.text_field :email, :placeholder => 'Email' %>
+            </div>
+            <div class="field">
+              <%= f.password_field :password, :placeholder => 'Contraseña'%>
+            </div>
+            <div class="field">
+              <%= f.password_field :password_confirmation, :placeholder => 'Confirmar contraseña' %>
+            </div>
+            </form>
+            <div class="actions">
+              <button class="btn btn-inverse">Aceptar</button> <% f.submit %>
+            </div>
+        </div>
+      </div>
+  </div> <!-- /container -->
+
+  
+
+  
+<% end %>
